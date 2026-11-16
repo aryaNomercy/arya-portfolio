@@ -2,629 +2,418 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#070b14">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b14">
+  <meta name="description" content="Website personal Arya — menjelajahi teknologi, mengembangkan bot, dan membuat aplikasi.">
+  <title>ARYA — Digital Creator</title>
 
-    <meta name="description"
-        content="ARYA - Digital Creator, Creative Technology and Personal Portfolio">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <title>ARYA | Digital Creator</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
-
-    <script
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@5/dist/email.min.js"
-        defer>
-    </script>
-
-    <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <!-- BACKGROUND -->
-    <div class="background-glow glow-left"></div>
-    <div class="background-glow glow-right"></div>
+  <!-- Background -->
+  <div class="background-glow"></div>
+  <div class="background-grid"></div>
 
-    <!-- LOADING SCREEN -->
-    <div class="loader" id="loader">
-        <div class="loader-logo">ARYA<span>.</span></div>
-        <div class="loader-bar">
-            <span></span>
-        </div>
-        <p>LOADING EXPERIENCE...</p>
-    </div>
+  <!-- Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-logo">A<span>.</span></div>
+    <div class="loader-line"></div>
+  </div>
 
-    <!-- NAVIGATION -->
-    <header class="header" id="header">
-        <nav class="navbar container">
+  <!-- Navbar -->
+  <header class="header" id="header">
+    <nav class="navbar container">
+      <a href="#home" class="logo">ARYA<span>.</span></a>
 
-            <a href="#home" class="logo">
-                ARYA<span>.</span>
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Beranda</a></li>
+        <li><a href="#about" class="nav-link">Tentang</a></li>
+        <li><a href="#skills" class="nav-link">Keahlian</a></li>
+        <li><a href="#projects" class="nav-link">Proyek</a></li>
+        <li><a href="#contact" class="nav-link nav-contact">Hubungi Saya <span>↗</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero section" id="home">
+      <div class="container hero-layout">
+
+        <div class="hero-content reveal">
+          <div class="eyebrow">
+            <span class="status-dot"></span>
+            SELAMAT DATANG DI WEBSITE SAYA
+          </div>
+
+          <p class="hero-greeting">Halo, saya</p>
+
+          <h1 class="hero-title">
+            ARYA<span class="accent">.</span>
+          </h1>
+
+          <h2 class="hero-role">
+            Saya seorang <span id="typedRole">Pembelajar</span><span class="typing-cursor">|</span>
+          </h2>
+
+          <p class="hero-description">
+            Seseorang yang memiliki rasa ingin tahu tinggi dan senang
+            mengeksplorasi dunia teknologi. Terus belajar, mencoba hal baru,
+            dan mengembangkan ide menjadi sesuatu yang nyata.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="button button-primary">
+              Jelajahi Proyek <span>↗</span>
             </a>
-
-            <button
-                class="menu-toggle"
-                id="menuToggle"
-                aria-label="Buka navigasi"
-                aria-expanded="false">
-
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </button>
-
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-
-            <a href="#contact" class="nav-contact">
-                Let's Talk <span>↗</span>
+            <a href="#about" class="button button-outline">
+              Tentang Saya
             </a>
-
-        </nav>
-    </header>
-
-    <main>
-
-        <!-- HERO -->
-        <section class="hero container" id="home">
-
-            <div class="hero-content reveal">
-
-                <div class="availability">
-                    <span class="online-dot"></span>
-                    DIGITAL CREATOR
-                </div>
-
-                <p class="eyebrow">HELLO, I'M</p>
-
-                <h1>
-                    ARYA<span class="blue-dot">.</span>
-                    <br>
-                    <span class="outline-text">Creative Mind</span>
-                </h1>
-
-                <div class="role-line">
-                    <span class="role-prefix">I'm a</span>
-                    <span class="role-text" id="roleText">
-                        Digital Creator
-                    </span>
-                </div>
-
-                <p class="hero-description">
-                    Saya mengeksplorasi kreativitas, teknologi,
-                    dan inovasi digital untuk mengubah ide
-                    menjadi sesuatu yang menarik dan bermakna.
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a href="#projects" class="button-primary">
-                        Explore Projects <span>↗</span>
-                    </a>
-
-                    <a href="#about" class="button-secondary">
-                        Discover More
-                    </a>
-
-                </div>
-
-                <div class="social-row">
-                    <span>FOLLOW ME</span>
-
-                    <a href="https://instagram.com/"
-                        target="_blank"
-                        rel="noopener noreferrer">INSTAGRAM</a>
-
-                    <a href="https://github.com/"
-                        target="_blank"
-                        rel="noopener noreferrer">GITHUB</a>
-
-                    <a href="https://t.me/"
-                        target="_blank"
-                        rel="noopener noreferrer">TELEGRAM</a>
-                </div>
-
-            </div>
-
-            <!-- DIGITAL CREATOR ILLUSTRATION -->
-            <div class="hero-art reveal">
-
-                <div class="art-orbit orbit-a"></div>
-                <div class="art-orbit orbit-b"></div>
-
-                <div class="art-card">
-
-                    <div class="art-top">
-                        <span>CREATIVE IDENTITY</span>
-                        <span class="art-status">● ONLINE</span>
-                    </div>
-
-                    <svg
-                        class="creator-illustration"
-                        viewBox="0 0 360 340"
-                        xmlns="http://www.w3.org/2000/svg"
-                        role="img"
-                        aria-label="Ilustrasi digital creator dengan laptop dan hoodie">
-
-                        <defs>
-                            <linearGradient id="hoodie" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0%" stop-color="#60A5FA"/>
-                                <stop offset="100%" stop-color="#1D4ED8"/>
-                            </linearGradient>
-
-                            <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0%" stop-color="#F6C7A4"/>
-                                <stop offset="100%" stop-color="#C98E70"/>
-                            </linearGradient>
-
-                            <linearGradient id="laptop" x1="0" y1="0" x2="1" y2="1">
-                                <stop offset="0%" stop-color="#334155"/>
-                                <stop offset="100%" stop-color="#0F172A"/>
-                            </linearGradient>
-
-                            <filter id="softGlow">
-                                <feGaussianBlur stdDeviation="8"/>
-                            </filter>
-                        </defs>
-
-                        <circle cx="180" cy="165" r="120"
-                            fill="#2563EB" opacity=".10"/>
-
-                        <circle cx="180" cy="165" r="90"
-                            fill="#3B82F6" opacity=".08"
-                            filter="url(#softGlow)"/>
-
-                        <!-- DECORATION -->
-                        <path d="M48 80 L54 96 L70 102 L54 108 L48 124 L42 108 L26 102 L42 96 Z"
-                            fill="#60A5FA"/>
-
-                        <path d="M310 65 L315 77 L327 82 L315 87 L310 99 L305 87 L293 82 L305 77 Z"
-                            fill="#3B82F6"/>
-
-                        <circle cx="75" cy="230" r="5" fill="#60A5FA"/>
-                        <circle cx="295" cy="220" r="4" fill="#93C5FD"/>
-
-                        <!-- BODY -->
-                        <path d="M94 315 Q100 226 133 210 L156 194 L204 194 L227 210 Q260 226 266 315 Z"
-                            fill="url(#hoodie)"/>
-
-                        <!-- NECK -->
-                        <path d="M157 183 L157 218 Q180 242 203 218 L203 183 Z"
-                            fill="url(#skin)"/>
-
-                        <!-- HEAD -->
-                        <ellipse cx="180" cy="133" rx="61" ry="73"
-                            fill="url(#skin)"/>
-
-                        <!-- HAIR -->
-                        <path d="M119 134 Q110 51 174 47 Q245 40 243 126
-                            Q225 104 207 89 Q180 109 120 110 Z"
-                            fill="#111827"/>
-
-                        <path d="M120 125 Q114 162 132 177 L140 142 Z"
-                            fill="#111827"/>
-
-                        <path d="M240 120 Q247 155 229 176 L220 140 Z"
-                            fill="#111827"/>
-
-                        <!-- FACE -->
-                        <ellipse cx="158" cy="142" rx="4" ry="3"
-                            fill="#1E293B"/>
-
-                        <ellipse cx="201" cy="142" rx="4" ry="3"
-                            fill="#1E293B"/>
-
-                        <path d="M170 166 Q180 174 191 166"
-                            fill="none" stroke="#965B4A"
-                            stroke-width="3" stroke-linecap="round"/>
-
-                        <!-- HOODIE DETAILS -->
-                        <path d="M151 206 Q180 248 209 206"
-                            fill="none" stroke="#BFDBFE"
-                            stroke-width="5" opacity=".6"/>
-
-                        <path d="M180 223 L180 280"
-                            stroke="#BFDBFE" stroke-width="3"
-                            opacity=".5"/>
-
-                        <!-- ARMS -->
-                        <path d="M112 228 Q79 240 92 282 L131 291"
-                            fill="none" stroke="#2563EB"
-                            stroke-width="22" stroke-linecap="round"/>
-
-                        <path d="M248 228 Q281 240 268 282 L229 291"
-                            fill="none" stroke="#2563EB"
-                            stroke-width="22" stroke-linecap="round"/>
-
-                        <!-- LAPTOP -->
-                        <rect x="113" y="260" width="134" height="79"
-                            rx="8" fill="url(#laptop)"
-                            stroke="#60A5FA" stroke-width="2"/>
-
-                        <rect x="123" y="270" width="114" height="58"
-                            rx="4" fill="#0B1220"/>
-
-                        <text x="180" y="306"
-                            font-size="21"
-                            font-family="Arial"
-                            font-weight="bold"
-                            fill="#60A5FA"
-                            text-anchor="middle">ARYA.</text>
-
-                        <path d="M99 339 L261 339 L273 347 L87 347 Z"
-                            fill="#64748B"/>
-
-                    </svg>
-
-                    <div class="art-bottom">
-                        <div>
-                            <strong>ARYA.</strong>
-                            <span>Digital Creator</span>
-                        </div>
-
-                        <div class="art-symbol">✦</div>
-                    </div>
-
-                </div>
-
-                <div class="floating-label label-one">
-                    <span>✦</span> CREATIVE
-                </div>
-
-                <div class="floating-label label-two">
-                    CODE & INNOVATION
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- STATS -->
-        <section class="stats container reveal">
-
-            <div class="stat-item">
-                <strong>01</strong>
-                <span>CREATIVE MIND</span>
-            </div>
-
-            <div class="stat-item">
-                <strong>03+</strong>
-                <span>TECH INTERESTS</span>
-            </div>
-
-            <div class="stat-item">
-                <strong>∞</strong>
-                <span>NEW IDEAS</span>
-            </div>
-
-        </section>
-
-        <!-- ABOUT -->
-        <section class="section container" id="about">
-
-            <div class="section-heading reveal">
-                <p class="eyebrow">GET TO KNOW ME</p>
-                <h2>About <span>Me.</span></h2>
-                <p>Mengenal perjalanan dan kreativitas saya.</p>
-            </div>
-
-            <div class="about-box reveal">
-
-                <div class="about-index">01 / ABOUT</div>
-
-                <div class="about-text">
-                    <h3>
-                        Turning Ideas Into
-                        <span>Digital Experiences.</span>
-                    </h3>
-
-                    <p>
-                        Halo! Saya Arya, seorang Digital Creator
-                        yang tertarik pada teknologi, pemrograman,
-                        desain, dan dunia digital.
-                    </p>
-
-                    <p>
-                        Saya senang mempelajari hal baru,
-                        bereksperimen dengan ide kreatif,
-                        dan membangun proyek yang dapat
-                        mengembangkan kemampuan saya.
-                    </p>
-
-                    <a href="#contact" class="text-link">
-                        Let's connect <span>↗</span>
-                    </a>
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- SKILLS -->
-        <section class="section container" id="skills">
-
-            <div class="section-heading reveal">
-                <p class="eyebrow">MY INTERESTS</p>
-                <h2>Creative <span>Fields.</span></h2>
-                <p>Bidang yang sedang saya eksplorasi.</p>
-            </div>
-
-            <div class="skills-grid reveal">
-
-                <article class="skill-card">
-                    <span class="skill-count">01</span>
-                    <div class="skill-icon">⌘</div>
-                    <h3>Web Development</h3>
-                    <p>Membangun website menggunakan HTML, CSS, dan JavaScript.</p>
-                    <span class="skill-label">DEVELOPMENT</span>
-                </article>
-
-                <article class="skill-card">
-                    <span class="skill-count">02</span>
-                    <div class="skill-icon">⚡</div>
-                    <h3>Programming</h3>
-                    <p>Mengeksplorasi logika pemrograman dan aplikasi digital.</p>
-                    <span class="skill-label">TECHNOLOGY</span>
-                </article>
-
-                <article class="skill-card">
-                    <span class="skill-count">03</span>
-                    <div class="skill-icon">✦</div>
-                    <h3>Digital Creativity</h3>
-                    <p>Mengembangkan ide dan kreativitas dalam berbagai karya digital.</p>
-                    <span class="skill-label">CREATIVITY</span>
-                </article>
-
-            </div>
-
-        </section>
-
-        <!-- PROJECTS -->
-        <section class="section container" id="projects">
-
-            <div class="section-heading reveal">
-                <p class="eyebrow">SELECTED WORK</p>
-                <h2>My <span>Projects.</span></h2>
-                <p>Eksplorasi proyek dan karya digital.</p>
-            </div>
-
-            <div class="filter-buttons reveal">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="web">Website</button>
-                <button class="filter-btn" data-filter="bot">Bot</button>
-                <button class="filter-btn" data-filter="creative">Creative</button>
-            </div>
-
-            <div class="projects-grid reveal">
-
-                <article class="project-card" data-category="web">
-
-                    <div class="project-art web-art">
-                        <span class="project-number">PROJECT 01</span>
-                        <div class="project-art-title">WEB<span>.</span></div>
-                        <div class="project-mini">PERSONAL PORTFOLIO</div>
-                    </div>
-
-                    <div class="project-content">
-                        <span class="project-category">WEB DEVELOPMENT</span>
-                        <h3>Personal Website</h3>
-                        <p>Website pribadi dengan desain modern dan responsif.</p>
-                        <button class="detail-btn"
-                            data-title="Personal Website"
-                            data-category="Web Development"
-                            data-description="Website portfolio pribadi ARYA yang dibuat menggunakan HTML, CSS, dan JavaScript. Proyek ini menjadi tempat untuk menampilkan profil, keahlian, dan karya digital.">
-                            View Details ↗
-                        </button>
-                    </div>
-
-                </article>
-
-                <article class="project-card" data-category="bot">
-
-                    <div class="project-art bot-art">
-                        <span class="project-number">PROJECT 02</span>
-                        <div class="project-art-title">BOT<span>.</span></div>
-                        <div class="project-mini">AUTOMATION SYSTEM</div>
-                    </div>
-
-                    <div class="project-content">
-                        <span class="project-category">BOT DEVELOPMENT</span>
-                        <h3>Telegram Bot</h3>
-                        <p>Eksplorasi pengembangan bot Telegram dengan JavaScript.</p>
-                        <button class="detail-btn"
-                            data-title="Telegram Bot"
-                            data-category="Bot Development"
-                            data-description="Eksplorasi proyek bot Telegram berbasis JavaScript dengan fitur otomatisasi dan berbagai perintah interaktif.">
-                            View Details ↗
-                        </button>
-                    </div>
-
-                </article>
-
-                <article class="project-card" data-category="creative">
-
-                    <div class="project-art creative-art">
-                        <span class="project-number">PROJECT 03</span>
-                        <div class="project-art-title">IDEA<span>.</span></div>
-                        <div class="project-mini">CREATIVE INNOVATION</div>
-                    </div>
-
-                    <div class="project-content">
-                        <span class="project-category">DIGITAL CREATIVITY</span>
-                        <h3>Creative Experiments</h3>
-                        <p>Eksperimen ide, visual, dan inovasi digital.</p>
-                        <button class="detail-btn"
-                            data-title="Creative Experiments"
-                            data-category="Digital Creativity"
-                            data-description="Ruang eksperimen untuk mengeksplorasi ide kreatif, visual digital, dan berbagai konsep teknologi.">
-                            View Details ↗
-                        </button>
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-        <!-- CONTACT -->
-        <section class="section container" id="contact">
-
-            <div class="contact-box reveal">
-
-                <p class="eyebrow">LET'S WORK TOGETHER</p>
-
-                <h2>
-                    Have An Idea?
-                    <br>
-                    <span>Let's Talk.</span>
-                </h2>
-
-                <p class="contact-description">
-                    Kirim pesan atau ajukan ide kolaborasi.
-                    Saya akan menerima pesanmu melalui email.
-                </p>
-
-                <form id="contactForm" class="contact-form">
-
-                    <div class="form-row">
-
-                        <div class="form-group">
-                            <label for="visitorName">Nama</label>
-                            <input
-                                type="text"
-                                id="visitorName"
-                                name="from_name"
-                                placeholder="Nama lengkap"
-                                maxlength="100"
-                                required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="visitorEmail">Email</label>
-                            <input
-                                type="email"
-                                id="visitorEmail"
-                                name="reply_to"
-                                placeholder="email@example.com"
-                                maxlength="150"
-                                required>
-                        </div>
-
-                    </div>
-
-                    <div class="form-group">
-                        <label for="visitorSubject">Subjek</label>
-                        <input
-                            type="text"
-                            id="visitorSubject"
-                            name="subject"
-                            placeholder="Tentang apa pesanmu?"
-                            maxlength="150"
-                            required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="visitorMessage">Pesan</label>
-                        <textarea
-                            id="visitorMessage"
-                            name="message"
-                            placeholder="Tuliskan pesanmu di sini..."
-                            rows="6"
-                            maxlength="3000"
-                            required></textarea>
-                    </div>
-
-                    <button
-                        type="submit"
-                        class="button-primary send-button"
-                        id="sendButton">
-
-                        <span id="sendButtonText">Send Message ↗</span>
-
-                    </button>
-
-                    <p
-                        class="form-status"
-                        id="formStatus"
-                        role="status"
-                        aria-live="polite"></p>
-
-                </form>
-
-                <div class="contact-social">
-                    <a href="https://instagram.com/"
-                        target="_blank"
-                        rel="noopener noreferrer">Instagram</a>
-
-                    <a href="https://github.com/"
-                        target="_blank"
-                        rel="noopener noreferrer">GitHub</a>
-
-                    <a href="https://t.me/"
-                        target="_blank"
-                        rel="noopener noreferrer">Telegram</a>
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-    <!-- PROJECT MODAL -->
-    <div class="modal" id="projectModal" aria-hidden="true">
-
-        <div class="modal-content" role="dialog"
-            aria-modal="true"
-            aria-labelledby="modalTitle">
-
-            <button class="modal-close" id="modalClose"
-                aria-label="Tutup popup">×</button>
-
-            <p class="eyebrow" id="modalCategory">PROJECT</p>
-
-            <h2 id="modalTitle">Project Title</h2>
-
-            <p id="modalDescription"></p>
-
-            <button class="button-secondary" id="modalDone">
-                Close
-            </button>
-
+          </div>
+
+          <div class="hero-socials">
+            <span>Temukan saya di</span>
+            <a href="https://www.instagram.com/arxxz_.12/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.tiktok.com/@arrr.stecu" target="_blank" rel="noopener noreferrer">TikTok</a>
+            <a href="https://t.me/Arrrrnomercy" target="_blank" rel="noopener noreferrer">Telegram</a>
+          </div>
         </div>
 
+        <!-- Laptop Illustration -->
+        <div class="hero-visual reveal">
+          <div class="visual-glow"></div>
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+
+          <div class="floating-card card-code">
+            <span class="floating-icon">⌘</span>
+            <div>
+              <strong>Creative Coding</strong>
+              <small>Ideas into reality</small>
+            </div>
+          </div>
+
+          <div class="laptop-scene">
+            <div class="laptop-screen">
+              <div class="screen-topbar">
+                <div class="screen-dots"><i></i><i></i><i></i></div>
+                <span>arya.dev</span>
+                <span class="screen-menu">•••</span>
+              </div>
+
+              <div class="screen-content">
+                <div class="screen-label">PERSONAL SPACE</div>
+                <div class="screen-heading">Hello<span>,</span><br>World<span>.</span></div>
+                <div class="screen-subtitle">Building something different.</div>
+                <div class="screen-code">
+                  <span>const</span> future = <span>"limitless"</span>;
+                </div>
+                <div class="screen-progress"><i></i></div>
+                <div class="screen-footer">
+                  <span>LEARN</span>
+                  <span>CREATE</span>
+                  <span>EXPLORE</span>
+                </div>
+              </div>
+            </div>
+            <div class="laptop-base">
+              <div class="laptop-notch"></div>
+            </div>
+          </div>
+
+          <div class="floating-card card-tech">
+            <span class="tech-symbol">✳</span>
+            <div>
+              <strong>Always Exploring</strong>
+              <small>Learning every day</small>
+            </div>
+          </div>
+
+          <div class="visual-caption">
+            <span class="caption-line"></span>
+            <span>THINK · CREATE · INNOVATE</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-cue">
+        <span>SCROLL TO EXPLORE</span>
+        <i>↓</i>
+      </a>
+    </section>
+
+    <!-- About -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-index">01 / ABOUT</span>
+          <h2>Mengenal <span>Saya.</span></h2>
+          <p>Sedikit cerita tentang perjalanan dan hal-hal yang saya sukai.</p>
+        </div>
+
+        <div class="about-layout">
+          <div class="about-visual reveal">
+            <div class="workspace-illustration">
+              <div class="workspace-light"></div>
+              <div class="workspace-window">
+                <div class="window-bar"><i></i><i></i><i></i></div>
+                <div class="window-body">
+                  <div class="window-sidebar"></div>
+                  <div class="window-main">
+                    <span class="window-line long"></span>
+                    <span class="window-line medium"></span>
+                    <span class="window-line short"></span>
+                    <div class="window-block"></div>
+                    <span class="window-line medium"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="workspace-laptop">
+                <div class="workspace-screen">
+                  <span>&lt;/&gt;</span>
+                  <small>CREATE SOMETHING</small>
+                </div>
+                <div class="workspace-base"></div>
+              </div>
+              <div class="workspace-tag">IDEA → REALITY</div>
+            </div>
+          </div>
+
+          <div class="about-content reveal">
+            <span class="content-label">WHO I AM</span>
+            <h3>Selalu ada hal baru untuk <span>dipelajari.</span></h3>
+
+            <p>
+              Saya adalah seseorang yang senang mempelajari berbagai hal,
+              terutama yang berhubungan dengan teknologi dan dunia digital.
+            </p>
+
+            <p>
+              Saya tertarik membuat bot WhatsApp dan Telegram, mempelajari
+              hosting, serta mengembangkan aplikasi. Bagi saya, setiap
+              percobaan adalah kesempatan untuk berkembang.
+            </p>
+
+            <div class="about-facts">
+              <div class="fact-item">
+                <span class="fact-number">01</span>
+                <div>
+                  <strong>Technology</strong>
+                  <small>Eksplorasi dunia digital</small>
+                </div>
+              </div>
+              <div class="fact-item">
+                <span class="fact-number">02</span>
+                <div>
+                  <strong>Development</strong>
+                  <small>Membangun ide dan proyek</small>
+                </div>
+              </div>
+              <div class="fact-item">
+                <span class="fact-number">03</span>
+                <div>
+                  <strong>Traveling</strong>
+                  <small>Menjelajahi tempat baru</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills section" id="skills">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-index">02 / EXPERTISE</span>
+          <h2>Hal yang Saya <span>Pelajari.</span></h2>
+          <p>Beberapa bidang yang sedang saya eksplorasi dan kembangkan.</p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <div class="skill-top">
+              <span class="skill-icon">⌘</span>
+              <span class="skill-number">01</span>
+            </div>
+            <h3>WhatsApp Bot</h3>
+            <p>Mempelajari pengembangan bot WhatsApp dengan berbagai fitur dan otomatisasi.</p>
+            <span class="skill-tag">BOT DEVELOPMENT</span>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-top">
+              <span class="skill-icon">✈</span>
+              <span class="skill-number">02</span>
+            </div>
+            <h3>Telegram Bot</h3>
+            <p>Membuat bot Telegram dengan sistem command, fitur interaktif, dan integrasi.</p>
+            <span class="skill-tag">BOT DEVELOPMENT</span>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-top">
+              <span class="skill-icon">⌁</span>
+              <span class="skill-number">03</span>
+            </div>
+            <h3>Hosting</h3>
+            <p>Mengeksplorasi server, deployment, dan pengelolaan layanan digital.</p>
+            <span class="skill-tag">SERVER & DEPLOYMENT</span>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-top">
+              <span class="skill-icon">⌘</span>
+              <span class="skill-number">04</span>
+            </div>
+            <h3>Application</h3>
+            <p>Mempelajari cara membangun aplikasi dan mengembangkan ide menjadi produk.</p>
+            <span class="skill-tag">APP DEVELOPMENT</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects section" id="projects">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-index">03 / SELECTED WORK</span>
+          <h2>Eksplorasi <span>Proyek.</span></h2>
+          <p>Beberapa proyek dan bidang pengembangan yang saya kerjakan.</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card project-featured reveal">
+            <div class="project-visual project-telegram">
+              <div class="project-window">
+                <div class="project-window-bar"><i></i><i></i><i></i></div>
+                <div class="terminal-content">
+                  <p><span>$</span> node arxa.js</p>
+                  <p class="terminal-success">✓ ARXA is running</p>
+                  <p class="terminal-muted">Telegram Bot System</p>
+                  <p><span>$</span> <i class="terminal-cursor"></i></p>
+                </div>
+              </div>
+              <span class="project-visual-number">01</span>
+            </div>
+            <div class="project-info">
+              <div class="project-meta"><span>BOT DEVELOPMENT</span><span>01</span></div>
+              <h3>ARXA Telegram Bot</h3>
+              <p>Pengembangan bot Telegram dengan berbagai command dan fitur otomatisasi.</p>
+              <span class="project-link">PERSONAL PROJECT <span>↗</span></span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-visual project-whatsapp">
+              <div class="chat-preview">
+                <div class="chat-header"><span class="chat-avatar">W</span><div><strong>WhatsApp Bot</strong><small>online</small></div></div>
+                <div class="chat-bubble">Halo! Ada yang bisa saya bantu?</div>
+                <div class="chat-bubble chat-reply">/menu</div>
+                <div class="chat-bubble">Berikut daftar fitur bot...</div>
+              </div>
+              <span class="project-visual-number">02</span>
+            </div>
+            <div class="project-info">
+              <div class="project-meta"><span>AUTOMATION</span><span>02</span></div>
+              <h3>WhatsApp Bot</h3>
+              <p>Eksplorasi bot WhatsApp untuk membantu otomatisasi berbagai kebutuhan.</p>
+              <span class="project-link">DEVELOPMENT <span>↗</span></span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-visual project-app">
+              <div class="app-preview">
+                <div class="app-preview-top"><span>MY APPLICATION</span><span>•••</span></div>
+                <div class="app-preview-shape"></div>
+                <div class="app-preview-lines"><i></i><i></i><i></i></div>
+                <div class="app-preview-button"></div>
+              </div>
+              <span class="project-visual-number">03</span>
+            </div>
+            <div class="project-info">
+              <div class="project-meta"><span>APP DEVELOPMENT</span><span>03</span></div>
+              <h3>Application Development</h3>
+              <p>Eksplorasi pengembangan aplikasi dan eksperimen dengan ide-ide digital.</p>
+              <span class="project-link">EXPLORATION <span>↗</span></span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <div class="contact-decoration"></div>
+          <div class="contact-content">
+            <span class="section-index">04 / GET IN TOUCH</span>
+            <h2>Punya ide menarik?<br><span>Mari terhubung.</span></h2>
+            <p>Terbuka untuk berbagi ide, berdiskusi, atau sekadar menyapa.</p>
+
+            <a class="contact-email" href="mailto:aryaseta755@gmail.com">
+              aryaseta755@gmail.com <span>↗</span>
+            </a>
+
+            <div class="contact-socials">
+              <a href="https://www.instagram.com/arxxz_.12/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+              <a href="https://www.tiktok.com/@arrr.stecu" target="_blank" rel="noopener noreferrer">TikTok ↗</a>
+              <a href="https://t.me/Arrrrnomercy" target="_blank" rel="noopener noreferrer">Telegram ↗</a>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <div class="form-heading">
+              <span>LET'S TALK</span>
+              <h3>Kirim pesan</h3>
+            </div>
+
+            <label for="name">Nama</label>
+            <input id="name" name="name" type="text" placeholder="Nama kamu" required>
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="email@contoh.com" required>
+
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tulis pesan kamu..." required></textarea>
+
+            <button type="submit" class="button button-primary form-submit">
+              Kirim Pesan <span>↗</span>
+            </button>
+            <p class="form-status" id="formStatus" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#home" class="logo">ARYA<span>.</span></a>
+      <p>Terus belajar. Terus berkembang. <span>© 2026 ARYA</span></p>
+      <a href="#home" class="back-top">KEMBALI KE ATAS ↑</a>
     </div>
+  </footer>
 
-    <!-- BACK TO TOP -->
-    <button class="back-to-top" id="backToTop"
-        aria-label="Kembali ke atas">
-        ↑
-    </button>
-
-    <!-- FOOTER -->
-    <footer class="footer container">
-
-        <a href="#home" class="logo">ARYA<span>.</span></a>
-
-        <p>© <span id="currentYear">2026</span> ARYA. All rights reserved.</p>
-
-        <a href="#home" class="footer-top">BACK TO TOP ↑</a>
-
-    </footer>
-
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
